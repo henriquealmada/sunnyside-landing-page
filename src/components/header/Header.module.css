@@ -1,0 +1,109 @@
+header {
+  padding: 2rem 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1800px;
+  margin: auto;
+}
+
+.logo {
+  height: 30px;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.change-navbar-bg {
+  background: #3dbeff;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+header ul li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+}
+
+header ul li a:hover {
+  color: var(--yellow);
+}
+
+.contact-btn {
+  font-family: var(--fraunces);
+  background: white;
+  padding: 1rem 1.4rem;
+  border-radius: 30px;
+  color: var(--very-dark-desaturated-blue);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  background: #7fd3fd;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  header ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 7.3rem;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%;
+    background: white;
+  }
+  header ul::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 53px 50px;
+    border-color: transparent transparent var(--white) transparent;
+    z-index: 100;
+  }
+  header ul li a {
+    color: var(--very-dark-grayish-blue);
+  }
+  .contact-btn {
+    background: var(--yellow);
+  }
+  .contact-btn:hover {
+    background: hsl(51, 92%, 66%);
+    color: black;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .show-menu {
+    display: flex;
+    padding: 3rem;
+  }
+}

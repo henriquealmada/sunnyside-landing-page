@@ -1,0 +1,29 @@
+.testimonials {
+  padding: 10rem 2rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.container h2 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  color: var(--grayish-blue);
+  font-family: 'Fraunces', serif;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+@media (max-width: 920px) {
+  .testimonials-container {
+    flex-direction: column;
+    gap: 8rem;
+  }
+}
